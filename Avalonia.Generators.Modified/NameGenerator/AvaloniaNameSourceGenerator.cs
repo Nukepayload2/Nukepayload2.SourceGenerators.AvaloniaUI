@@ -6,7 +6,6 @@ using Avalonia.Generators.Common;
 using Avalonia.Generators.Common.Domain;
 using Avalonia.Generators.Compiler;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
 
 namespace Avalonia.Generators.NameGenerator;
 
@@ -65,7 +64,7 @@ public class AvaloniaNameSourceGenerator : ISourceGenerator
             return null;
         }
 
-        var types = new RoslynTypeSystem((CSharpCompilation)context.Compilation);
+        var types = new RoslynTypeSystem(context.Compilation);
         ICodeGenerator generator = options.AvaloniaNameGeneratorBehavior switch {
             Behavior.OnlyProperties => new OnlyPropertiesCodeGenerator(),
             Behavior.InitializeComponent => new InitializeComponentCodeGenerator(types, options.AvaloniaNameGeneratorAttachDevTools),

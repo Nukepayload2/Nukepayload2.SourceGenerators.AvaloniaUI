@@ -4,6 +4,9 @@
     <RootNamespace>Nukepayload2.SourceGenerators.AvaloniaUI</RootNamespace>
     <TargetFramework>netstandard2.0</TargetFramework>
     <IncludeBuildOutput>false</IncludeBuildOutput>
+    <DebugType>embedded</DebugType>
+    <IsPackable>true</IsPackable>
+    <IncludeSymbols>false</IncludeSymbols>
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
   </PropertyGroup>
 
@@ -14,10 +17,14 @@
 
   <ItemGroup>
     <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/vb" Visible="false" />
+    <None Include="$(OutputPath)\Avalonia.Generators.Common.dll" Pack="true" PackagePath="analyzers/dotnet/vb" Visible="false" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Avalonia.Generators.Modified\Avalonia.Generators.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="$(AssemblyName).props" Pack="true" PackagePath="buildTransitive/$(AssemblyName).props" />
+  </ItemGroup>
 </Project>
