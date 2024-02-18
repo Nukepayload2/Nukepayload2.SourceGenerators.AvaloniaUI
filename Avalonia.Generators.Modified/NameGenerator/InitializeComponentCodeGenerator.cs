@@ -4,7 +4,7 @@ using XamlX.TypeSystem;
 
 namespace Avalonia.Generators.NameGenerator;
 
-internal class InitializeComponentCodeGenerator: ICodeGenerator
+internal class InitializeComponentCodeGenerator : ICodeGenerator
 {
     private readonly bool _diagnosticsAreConnected;
     private const string AttachDevToolsCodeBlock = @"
@@ -19,13 +19,14 @@ internal class InitializeComponentCodeGenerator: ICodeGenerator
         = @"        /// <param name=""attachDevTools"">Should the dev tools be attached.</param>
 ";
 
+    protected bool DiagnosticsAreConnected => _diagnosticsAreConnected;
 
     public InitializeComponentCodeGenerator(IXamlTypeSystem types, bool avaloniaNameGeneratorAttachDevTools)
     {
         _diagnosticsAreConnected = avaloniaNameGeneratorAttachDevTools && types.FindAssembly("Avalonia.Diagnostics") != null;
     }
 
-    public string GenerateCode(string className, string nameSpace, IXamlType xamlType, IEnumerable<ResolvedName> names)
+    public virtual string GenerateCode(string className, string nameSpace, IXamlType xamlType, IEnumerable<ResolvedName> names)
     {
         var properties = new List<string>();
         var initializations = new List<string>();
@@ -68,8 +69,8 @@ namespace {nameSpace}
 }}
 ";
     }
-        
-    private static bool IsWindow(IXamlType xamlType)
+
+    protected static bool IsWindow(IXamlType xamlType)
     {
         var type = xamlType;
         bool isWindow;

@@ -50,7 +50,7 @@ internal class XamlXNameResolver : INameResolver, IXamlAstVisitor
                     ? $"global::{typeName}"
                     : $@"global::{typeName}<{string.Join(", ", typeAgs.Select(arg => $"global::{arg}"))}>";
 
-                var resolvedName = new ResolvedName(genericTypeName, text.Text, fieldModifier);
+                var resolvedName = new ResolvedName(clrType, text.Text, fieldModifier);
                 if (_items.Contains(resolvedName))
                     continue;
                 _items.Add(resolvedName);

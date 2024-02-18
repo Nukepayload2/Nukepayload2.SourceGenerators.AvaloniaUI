@@ -9,7 +9,6 @@ using Microsoft.CodeAnalysis;
 
 namespace Avalonia.Generators.NameGenerator;
 
-[Generator]
 public class AvaloniaNameSourceGenerator : ISourceGenerator
 {
     private const string SourceItemGroupMetadata = "build_metadata.AdditionalFiles.SourceItemGroup";
@@ -56,7 +55,7 @@ public class AvaloniaNameSourceGenerator : ISourceGenerator
                 && sourceItemGroup == "AvaloniaXaml");
     }
 
-    private static INameGenerator CreateNameGenerator(GeneratorExecutionContext context)
+    private INameGenerator CreateNameGenerator(GeneratorExecutionContext context)
     {
         var options = new GeneratorOptions(context);
         if (!options.AvaloniaNameGeneratorIsEnabled)
@@ -65,21 +64,39 @@ public class AvaloniaNameSourceGenerator : ISourceGenerator
         }
 
         var types = new RoslynTypeSystem(context.Compilation);
-        ICodeGenerator generator = options.AvaloniaNameGeneratorBehavior switch {
+        ICodeGenerator generator = GetCodeGenerator(options, types);
+
+        var compiler = MiniCompiler.CreateDefault(types, MiniCompiler.AvaloniaXmlnsDefinitionAttribute);
+        ViewFileNamingStrategy avaloniaNameGeneratorViewFileNamingStrategy = options.AvaloniaNameGeneratorViewFileNamingStrategy;
+        GlobPatternGroup pathPattern = new GlobPatternGroup(options.AvaloniaNameGeneratorFilterByPath);
+        GlobPatternGroup namespacePattern = new GlobPatternGroup(options.AvaloniaNameGeneratorFilterByNamespace);
+        XamlXViewResolver classes = new XamlXViewResolver(types, compiler, true,
+                        type => context.ReportNameGeneratorInvalidType(type),
+                        error => context.ReportNameGeneratorUnhandledError(error));
+        XamlXNameResolver names = new XamlXNameResolver(options.AvaloniaNameGeneratorClassFieldModifier);
+        return CreateNameGenerator(avaloniaNameGeneratorViewFileNamingStrategy, pathPattern, namespacePattern, classes, names, generator);
+    }
+
+    private protected virtual ICodeGenerator GetCodeGenerator(GeneratorOptions options, RoslynTypeSystem types)
+    {
+        return options.AvaloniaNameGeneratorBehavior switch
+        {
             Behavior.OnlyProperties => new OnlyPropertiesCodeGenerator(),
             Behavior.InitializeComponent => new InitializeComponentCodeGenerator(types, options.AvaloniaNameGeneratorAttachDevTools),
             _ => throw new ArgumentOutOfRangeException()
         };
+    }
 
-        var compiler = MiniCompiler.CreateDefault(types, MiniCompiler.AvaloniaXmlnsDefinitionAttribute);
+    private protected virtual INameGenerator CreateNameGenerator(
+        ViewFileNamingStrategy avaloniaNameGeneratorViewFileNamingStrategy, GlobPatternGroup pathPattern,
+        GlobPatternGroup namespacePattern, XamlXViewResolver classes, XamlXNameResolver names, ICodeGenerator generator)
+    {
         return new AvaloniaNameGenerator(
-            options.AvaloniaNameGeneratorViewFileNamingStrategy,
-            new GlobPatternGroup(options.AvaloniaNameGeneratorFilterByPath),
-            new GlobPatternGroup(options.AvaloniaNameGeneratorFilterByNamespace),
-            new XamlXViewResolver(types, compiler, true,
-                type => context.ReportNameGeneratorInvalidType(type),
-                error => context.ReportNameGeneratorUnhandledError(error)),
-            new XamlXNameResolver(options.AvaloniaNameGeneratorClassFieldModifier),
-            generator);
+                    avaloniaNameGeneratorViewFileNamingStrategy,
+                    pathPattern,
+                    namespacePattern,
+                    classes,
+                    names,
+                    generator);
     }
 }

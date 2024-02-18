@@ -32,6 +32,11 @@ internal class AvaloniaNameGenerator : INameGenerator
         _code = code;
     }
 
+    /// <summary>
+    /// Default=.cs
+    /// </summary>
+    protected virtual string FileExtension => ".cs";
+
     public IEnumerable<GeneratedPartialClass> GenerateNameReferences(IEnumerable<AdditionalText> additionalFiles, CancellationToken cancellationToken)
     {
         var resolveViews =
@@ -57,10 +62,13 @@ internal class AvaloniaNameGenerator : INameGenerator
         return query;
     }
 
-    private static string ResolveViewFileName(ResolvedView view, ViewFileNamingStrategy strategy) => strategy switch
+    protected string ResolveViewFileName(ResolvedView view, ViewFileNamingStrategy strategy)
     {
-        ViewFileNamingStrategy.ClassName => $"{view.ClassName}.g.cs",
-        ViewFileNamingStrategy.NamespaceAndClassName => $"{view.Namespace}.{view.ClassName}.g.cs",
-        _ => throw new ArgumentOutOfRangeException(nameof(strategy), strategy, "Unknown naming strategy!")
-    };
+        return strategy switch
+        {
+            ViewFileNamingStrategy.ClassName => $"{view.ClassName}.g{FileExtension}",
+            ViewFileNamingStrategy.NamespaceAndClassName => $"{view.Namespace}.{view.ClassName}.g{FileExtension}",
+            _ => throw new ArgumentOutOfRangeException(nameof(strategy), strategy, "Unknown naming strategy!")
+        };
+    }
 }
