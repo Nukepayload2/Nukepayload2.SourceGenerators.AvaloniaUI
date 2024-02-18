@@ -45,4 +45,11 @@ internal class ResolvedName
     public string Name { get; }
     // Convertible to VB.
     public string CsFieldModifier { get; }
+
+    public void Deconstruct(out string typeName, out string name, out string fieldModifier)
+    {
+        typeName = CsTypeName;
+        name = Name;
+        fieldModifier = CsFieldModifier;
+    }
 } // End Class ' ResolvedName

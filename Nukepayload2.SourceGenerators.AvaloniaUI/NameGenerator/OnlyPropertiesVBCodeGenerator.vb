@@ -5,11 +5,6 @@ Imports XamlX.TypeSystem
 Friend Class OnlyPropertiesVBCodeGenerator
     Inherits OnlyPropertiesCodeGenerator
 
-    Const Space4 = "    "
-    Const Space8 = Space4 & Space4
-    Const Space12 = Space8 & Space4
-    Const Space16 = Space12 & Space4
-
     Public Overrides Function GenerateCode(className As String, nameSpaceName As String, xamlType As IXamlType, names As IEnumerable(Of ResolvedName)) As String
         Dim namedControls =
             From info In names
@@ -35,28 +30,4 @@ End Namespace
 "
     End Function
 
-    Private Function GetVbTypeName(clrType As IXamlType) As String
-        Dim typeName = $"{clrType.Namespace}.{clrType.Name}"
-        Dim typeAgs = From arg In clrType.GenericArguments Select GetVbTypeName(arg)
-        Dim genericTypeName = If(clrType.GenericArguments.Count = 0,
-            $"Global.{typeName}",
-            $"Global.{typeName}(Of {String.Join(", ", From arg In typeAgs Select $"Global.{arg}")})")
-        Return genericTypeName
-    End Function
-
-    Private Function CsModifierToVB(modifier As String) As String
-        If modifier Is Nothing Then Return String.Empty
-        Select Case modifier
-            Case "public"
-                Return "Public"
-            Case "internal"
-                Return "Friend"
-            Case "protected"
-                Return "Protected"
-            Case "private"
-                Return "Private"
-            Case Else
-                Return modifier
-        End Select
-    End Function
 End Class
