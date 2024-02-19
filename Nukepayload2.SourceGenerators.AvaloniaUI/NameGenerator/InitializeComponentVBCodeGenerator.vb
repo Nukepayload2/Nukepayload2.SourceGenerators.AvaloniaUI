@@ -42,9 +42,18 @@ Imports Avalonia.Markup.Xaml
 
 Namespace Global.{nameSpaceName}
 
+    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated>
     Partial Class {className}
 
 {String.Join(vbCrLf, properties)}
+
+        ''' <summary>
+        ''' This overload is used by the Visual Basic compiler to generate
+        ''' call to this method in the default <see langword=""Sub""/> <see langword=""New""/>().
+        ''' </summary>
+        Private Sub InitializeComponent()
+            InitializeComponent(loadXaml:=True)
+        End Sub
 
         ''' <summary>
         ''' Wires up the controls and optionally loads XAML markup and attaches dev tools (if Avalonia.Diagnostics package is referenced).
@@ -64,5 +73,6 @@ Namespace Global.{nameSpaceName}
 End Namespace
 "
     End Function
+
 
 End Class
