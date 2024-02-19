@@ -19,8 +19,8 @@ Friend Class InitializeComponentVBCodeGenerator
 "
 
     Public Overrides Function GenerateCode(className As String, nameSpaceName As String, xamlType As IXamlType, names As IEnumerable(Of ResolvedName)) As String
-        Dim properties = New List(Of String)()
-        Dim initializations = New List(Of String)()
+        Dim properties As New List(Of String)
+        Dim initializations As New List(Of String)
         For Each resolvedName In names
             With resolvedName
                 Dim typeName = GetVbTypeName(.XamlType)
