@@ -29,14 +29,14 @@
     <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.9" />
     <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.9" />
   </ItemGroup>
+  
+  <!--Globbing-->
   <ItemGroup>
-    <Compile Update="**\*.axaml.vb">
+    <Compile Remove="**\*.axaml.vb"/>
+    <Compile Include="**\*.axaml.vb">
       <DependentUpon>%(Filename)</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Avalonia.Generators.Modified\Avalonia.Generators.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"  />
-    <ProjectReference Include="..\..\Nukepayload2.SourceGenerators.AvaloniaUI\Nukepayload2.SourceGenerators.AvaloniaUI.vbproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-  </ItemGroup>
+  
 </Project>

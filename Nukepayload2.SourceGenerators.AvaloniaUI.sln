@@ -13,6 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决�
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demos", "Demos", "{74C01F4C-3640-44B6-8477-84CD3E29C328}"
+	ProjectSection(SolutionItems) = preProject
+		Demos\Directory.Build.props = Demos\Directory.Build.props
+	EndProjectSection
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "BasicMvvmSample", "Demos\BasicMvvmSample\BasicMvvmSample.vbproj", "{7DEDCD33-571E-477A-A4B9-C204178EED01}"
 EndProject

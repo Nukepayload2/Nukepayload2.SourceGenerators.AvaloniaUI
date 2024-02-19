@@ -1,0 +1,6 @@
+<Project>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Avalonia.Generators.Modified\Avalonia.Generators.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"  />
+    <ProjectReference Include="..\..\Nukepayload2.SourceGenerators.AvaloniaUI\Nukepayload2.SourceGenerators.AvaloniaUI.vbproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+</Project>
