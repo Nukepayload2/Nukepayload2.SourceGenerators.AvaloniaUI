@@ -11,7 +11,7 @@ Friend Class InitializeComponentVBCodeGenerator
 
     Private Const AttachDevToolsCodeBlock = "
 #If DEBUG Then
-            If attachDevTools Then AttachDevTools()
+            If attachDevTools Then Me.AttachDevTools()
 #End If
 "
     Private Const AttachDevToolsParameterDocumentation =
