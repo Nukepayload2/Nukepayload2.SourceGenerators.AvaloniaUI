@@ -19,7 +19,7 @@ internal interface INameResolver
     IReadOnlyList<ResolvedName> ResolveNames(XamlDocument xaml);
 }
 
-internal class ResolvedName
+internal class ResolvedName : IEquatable<ResolvedName>
 {
     private readonly Lazy<string> _typeName;
 
@@ -51,5 +51,21 @@ internal class ResolvedName
         typeName = CsTypeName;
         name = Name;
         fieldModifier = CsFieldModifier;
+    }
+
+    public override bool Equals(object obj)
+    {
+        return Equals(obj as ResolvedName);
+    }
+
+    public bool Equals(ResolvedName other)
+    {
+        return other is not null &&
+               Name == other.Name;
+    }
+
+    public override int GetHashCode()
+    {
+        return 539060726 + EqualityComparer<string>.Default.GetHashCode(Name);
     }
 } // End Class ' ResolvedName

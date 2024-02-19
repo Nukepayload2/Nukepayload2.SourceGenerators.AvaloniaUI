@@ -10,6 +10,7 @@ namespace Avalonia.Generators.Common;
 internal class XamlXNameResolver : INameResolver, IXamlAstVisitor
 {
     private readonly List<ResolvedName> _items = new();
+    private readonly HashSet<ResolvedName> _itemsSet = new();
     private readonly string _defaultFieldModifier;
 
     public XamlXNameResolver(NamedFieldModifier namedFieldModifier = NamedFieldModifier.Internal)
@@ -20,6 +21,7 @@ internal class XamlXNameResolver : INameResolver, IXamlAstVisitor
     public IReadOnlyList<ResolvedName> ResolveNames(XamlDocument xaml)
     {
         _items.Clear();
+        _itemsSet.Clear();
         xaml.Root.Visit(this);
         xaml.Root.VisitChildren(this);
         return _items;
@@ -51,9 +53,8 @@ internal class XamlXNameResolver : INameResolver, IXamlAstVisitor
                     : $@"global::{typeName}<{string.Join(", ", typeAgs.Select(arg => $"global::{arg}"))}>";
 
                 var resolvedName = new ResolvedName(clrType, text.Text, fieldModifier);
-                if (_items.Contains(resolvedName))
-                    continue;
-                _items.Add(resolvedName);
+                if (_itemsSet.Add(resolvedName))
+                    _items.Add(resolvedName);
             }
         }
 
