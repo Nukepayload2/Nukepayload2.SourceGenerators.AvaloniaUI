@@ -7,5 +7,22 @@ Embedded 3rd-party components:
 
 ## Progress
 - [x] Convert C# generator to VB
+- [x] Basic manual testing
+    - [x] `InitializeComponents` is working
+    - [x] `DesignerGenerated` (automatic `InitializeComponents` call) is working
+    - [x] `x:Name` and `WithEvents` is working
 - [ ] Add demo projects
-- [ ] Fix bugs exposed by the demo projects
+    - [ ] Port [Mvvm](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/MVVM) samples
+        - [x] BasicMvvm
+        - [x] CommandSample
+        - [ ] ValidationSample
+        - [ ] ValueConversionSample
+    - [ ] Port [CustomControls](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CustomControls) samples
+        - [ ] RatingControlSample
+    - [ ] Add VB-specific samples for testing purpose
+        - [ ] Generate `WithEvents` by using `x:Name` in XAML
+        - [ ] The `InitializeComponents` method can be automatically called by the VB compiler
+        - [ ] x:FieldModifier: Make generated element references `Public`, `Friend`, `Protected` or `Private`. `Friend` is the default value.
+- [ ] Release NuGet package
+    - [ ] Prerelease package when basic manual testing is completed
+    - [ ] Publish stable release when all demos are working correctly
