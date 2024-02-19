@@ -12,25 +12,19 @@ Namespace ViewModels
 		Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
 
 		' For convenience we add a method which will raise the above event.
-		'INSTANT VB WARNING: Nullable reference types have no equivalent in VB:
-		'ORIGINAL LINE: private void RaisePropertyChanged([CallerMemberName] string? propertyName = null)
-		Private Sub RaisePropertyChanged(<CallerMemberName> Optional ByVal propertyName As String = Nothing)
+		Private Sub RaisePropertyChanged(<CallerMemberName> Optional propertyName As String = Nothing)
 			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
 		End Sub
 
 		' ---- Add some Properties ----
 
-		'INSTANT VB WARNING: Nullable reference types have no equivalent in VB:
-		'ORIGINAL LINE: private string? _Name;
 		Private _Name As String ' This is our backing field for Name
 
-		'INSTANT VB WARNING: Nullable reference types have no equivalent in VB:
-		'ORIGINAL LINE: public string? Name
-		Public Property Name() As String
+		Public Property Name As String
 			Get
 				Return _Name
 			End Get
-			Set(ByVal value As String)
+			Set(value As String)
 				' We only want to update the UI if the Name actually changed, so we check if the value is actually new
 				If _Name <> value Then
 					' 1. update our backing field
@@ -46,9 +40,8 @@ Namespace ViewModels
 			End Set
 		End Property
 
-
 		' Greeting will change based on a Name.
-		Public ReadOnly Property Greeting() As String
+		Public ReadOnly Property Greeting As String
 			Get
 				If String.IsNullOrEmpty(Name) Then
 					' If no Name is provided, use a default Greeting

@@ -30,7 +30,6 @@
     <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.9" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="**\*.vb" Exclude="obj\**" />
     <Compile Update="**\*.axaml.vb">
       <DependentUpon>%(Filename)</DependentUpon>
       <SubType>Code</SubType>
