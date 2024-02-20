@@ -5,6 +5,25 @@ This is a Visual Basic SourceGenerator built for generating strongly-typed refer
 - `WithEvents` members: allows you to attach events or locate event handlers with the drop-down button of Visual Basic code editor.
 - `DesignerGenerated` attribute: Let the Visual Basic compiler and editor call `InitializeComponents` for you.
 
+## System requirements
+### Minimum requirements
+- Visual Studio 16.9 or later
+- .NET SDK 6.0 or later
+
+### Highest tested environment
+- Visual Studio 17.9.0
+- .NET SDK 8.0
+- Windows 11 23H2
+
+## Avalonia compatibility
+### Package 1.0.0 and its prerelease versions
+It's guaranteed to be compatible with `11.0.9`. Other versions may work, but they are not tested.
+
+## How to use it
+Install the `Nukepayload2.SourceGenerators.AvaloniaUI` package to a VB Avalonia project.
+
+You can use [demo projects](https://github.com/Nukepayload2/Nukepayload2.SourceGenerators.AvaloniaUI/tree/master/Demos) as your project template collection. If you need to create a new project, just copy a demo project to your solution, then install the `Nukepayload2.SourceGenerators.AvaloniaUI` package.
+
 ## Progress
 - [x] Convert C# generator to VB
 - [x] Basic manual testing (tested with 11.0.9)

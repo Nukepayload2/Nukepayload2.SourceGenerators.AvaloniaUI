@@ -9,11 +9,21 @@
     <IncludeSymbols>false</IncludeSymbols>
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
     <OptionStrict>On</OptionStrict>
-    <VersionSuffix>beta02</VersionSuffix>
-    <Version>1.0.0</Version>
-    <PackageVersion>$(Version)-$(VersionSuffix)</PackageVersion>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <VersionSuffix>beta04</VersionSuffix>
+    <Version>1.0.0</Version>
+    <PackageVersion>$(Version)-$(VersionSuffix)</PackageVersion>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Description>Provides design-time source generation support for VB Avalonia projects</Description>
+    <Authors>Nukepayload2,AvaloniaUI</Authors>
+    <RepositoryType>Git</RepositoryType>
+    <RepositoryUrl>https://github.com/Nukepayload2/Nukepayload2.SourceGenerators.AvaloniaUI</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.VisualBasic" Version="3.9.0" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" PrivateAssets="all" />
@@ -30,5 +40,9 @@
 
   <ItemGroup>
     <None Include="$(AssemblyName).props" Pack="true" PackagePath="buildTransitive/$(AssemblyName).props" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>
