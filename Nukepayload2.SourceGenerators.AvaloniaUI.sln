@@ -25,6 +25,8 @@ Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "ValidationSample", "Demos\V
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "ValueConversionSample", "Demos\ValueConversionSample\ValueConversionSample.vbproj", "{8F9488D4-C9F4-4D5F-8A54-A05B9A62C153}"
 EndProject
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "RatingControlSample", "Demos\RatingControlSample\RatingControlSample.vbproj", "{FF9345F6-04B7-436A-A353-7CD94E125462}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{8F9488D4-C9F4-4D5F-8A54-A05B9A62C153}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F9488D4-C9F4-4D5F-8A54-A05B9A62C153}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F9488D4-C9F4-4D5F-8A54-A05B9A62C153}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF9345F6-04B7-436A-A353-7CD94E125462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF9345F6-04B7-436A-A353-7CD94E125462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF9345F6-04B7-436A-A353-7CD94E125462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF9345F6-04B7-436A-A353-7CD94E125462}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{957DD4D6-3278-4A5B-BA44-78D9C27AA87B} = {74C01F4C-3640-44B6-8477-84CD3E29C328}
 		{379D6744-0E25-4C6C-83DD-2EE5582221B7} = {74C01F4C-3640-44B6-8477-84CD3E29C328}
 		{8F9488D4-C9F4-4D5F-8A54-A05B9A62C153} = {74C01F4C-3640-44B6-8477-84CD3E29C328}
+		{FF9345F6-04B7-436A-A353-7CD94E125462} = {74C01F4C-3640-44B6-8477-84CD3E29C328}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14FDA700-11E2-4A33-901B-C1D75B98DC5E}

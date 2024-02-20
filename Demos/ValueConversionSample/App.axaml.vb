@@ -13,8 +13,8 @@ Partial Public Class App
 
     Public Overrides Sub OnFrameworkInitializationCompleted()
         If TypeOf ApplicationLifetime Is IClassicDesktopStyleApplicationLifetime Then
-            Dim desktop As IClassicDesktopStyleApplicationLifetime = DirectCast(ApplicationLifetime, IClassicDesktopStyleApplicationLifetime)
-            desktop.MainWindow = New MainWindow With {.DataContext = New MainWindowViewModel()}
+            Dim desktop = DirectCast(ApplicationLifetime, IClassicDesktopStyleApplicationLifetime)
+            desktop.MainWindow = New MainWindow With {.DataContext = New MainWindowViewModel}
         End If
 
         MyBase.OnFrameworkInitializationCompleted()

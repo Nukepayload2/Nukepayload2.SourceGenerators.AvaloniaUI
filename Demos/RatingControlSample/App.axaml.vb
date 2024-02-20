@@ -1,8 +1,8 @@
 ﻿Imports Avalonia
 Imports Avalonia.Controls.ApplicationLifetimes
 Imports Avalonia.Markup.Xaml
-Imports BasicMvvmSample.ViewModels
-Imports BasicMvvmSample.Views
+Imports RatingControlSample.ViewModels
+Imports RatingControlSample.Views
 
 Partial Public Class App
 	Inherits Application
