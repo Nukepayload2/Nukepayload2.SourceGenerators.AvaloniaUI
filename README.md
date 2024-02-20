@@ -35,11 +35,11 @@ This is a Visual Basic SourceGenerator built for generating strongly-typed refer
         - [ ] TestableApp.Appium
         - [ ] TestableApp.Headless.NUnit
         - [ ] TestableApp.Headless.XUnit
-    - [ ] Add VB-specific samples for testing purpose
-        - [ ] Generate `WithEvents` by using `x:Name` in XAML
-        - [ ] The `InitializeComponents` method can be automatically called by the VB compiler
-        - [ ] x:FieldModifier: Make generated element references `Public`, `Friend`, `Protected` or `Private`. `Friend` is the default value.
-        - [ ] A project that uses the NuGet package of source generator instead of project reference 
+    - [x] Add VB-specific samples for testing purpose
+        - [x] Generate `WithEvents` by using `x:Name` in XAML
+        - [x] The `InitializeComponents` method can be automatically called by the VB compiler
+        - [x] x:FieldModifier: Make generated element references `Public`, `Friend`, `Protected` or `Private`. `Friend` is the default value.
+        - [x] A project that uses the NuGet package of source generator instead of project reference 
 - [ ] Release NuGet package
     - [ ] Prerelease package when basic manual testing is completed
     - [ ] Publish stable release when all demos are working correctly

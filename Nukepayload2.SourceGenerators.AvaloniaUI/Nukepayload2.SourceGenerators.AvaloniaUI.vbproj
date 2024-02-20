@@ -9,6 +9,9 @@
     <IncludeSymbols>false</IncludeSymbols>
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
     <OptionStrict>On</OptionStrict>
+    <VersionSuffix>beta02</VersionSuffix>
+    <Version>1.0.0</Version>
+    <PackageVersion>$(Version)-$(VersionSuffix)</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Avalonia.Generators.Modified\Avalonia.Generators.csproj" />
+    <ProjectReference Include="..\Avalonia.Generators.Modified\Avalonia.Generators.csproj" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
