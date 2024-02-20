@@ -64,7 +64,7 @@ You can use [demo projects](https://github.com/Nukepayload2/Nukepayload2.SourceG
         - [x] x:FieldModifier: Make generated element references `Public`, `Friend`, `Protected` or `Private`. `Friend` is the default value.
         - [x] A project that uses the NuGet package of source generator instead of project reference 
 - [ ] Release NuGet package
-    - [ ] Prerelease package when basic manual testing is completed
+    - [x] Prerelease package when basic manual testing is completed
     - [ ] Publish stable release when all demos are working correctly
 
 ## References
