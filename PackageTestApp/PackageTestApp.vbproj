@@ -28,7 +28,7 @@
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.9" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.9" />
     <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.9" />
-    <PackageReference Include="Nukepayload2.SourceGenerators.AvaloniaUI" Version="1.0.0-beta04" />
+    <PackageReference Include="Nukepayload2.SourceGenerators.AvaloniaUI" Version="1.0.0-beta05" />
   </ItemGroup>
   
   <!--Globbing-->

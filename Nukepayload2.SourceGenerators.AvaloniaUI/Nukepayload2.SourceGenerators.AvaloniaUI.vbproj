@@ -12,7 +12,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <VersionSuffix>beta04</VersionSuffix>
+    <VersionSuffix>beta05</VersionSuffix>
     <Version>1.0.0</Version>
     <PackageVersion>$(Version)-$(VersionSuffix)</PackageVersion>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -22,6 +22,9 @@
     <RepositoryUrl>https://github.com/Nukepayload2/Nukepayload2.SourceGenerators.AvaloniaUI</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Support Avalonia 11.0.9</PackageReleaseNotes>
+    <Copyright>Copyright 2024 Nukepayload2</Copyright>
+    <PackageTags>Avalonia;VB;Visual Basic;Source generator</PackageTags>
   </PropertyGroup>
   
   <ItemGroup>
