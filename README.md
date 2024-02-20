@@ -1,6 +1,10 @@
 # Nukepayload2.SourceGenerators.AvaloniaUI
 This is a Visual Basic SourceGenerator built for generating strongly-typed references to controls with x:Name (or just Name) attributes declared in XAML (or, in .axaml). The source generator will look for the xaml (or axaml) file with the same name as your partial Visual Basic class that is a subclass of Avalonia.INamed and parses the XAML markup, finds all XAML tags with x:Name attributes and generates the Visual Basic code.
 
+[Get on NuGet](https://www.nuget.org/packages/Nukepayload2.SourceGenerators.AvaloniaUI)
+
+[![NuGet version (Nukepayload2.SourceGenerators.AvaloniaUI)](https://img.shields.io/nuget/v/Nukepayload2.SourceGenerators.AvaloniaUI.svg?style=flat-square)](https://www.nuget.org/packages/Nukepayload2.SourceGenerators.AvaloniaUI/)
+
 ## VB-specific features
 - `WithEvents` members: allows you to attach events or locate event handlers with the drop-down button of Visual Basic code editor.
 - `DesignerGenerated` attribute: Let the Visual Basic compiler and editor call `InitializeComponents` for you.

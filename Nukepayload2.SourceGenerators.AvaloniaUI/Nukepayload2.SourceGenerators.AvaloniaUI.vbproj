@@ -16,7 +16,10 @@
     <Version>1.0.0</Version>
     <PackageVersion>$(Version)-$(VersionSuffix)</PackageVersion>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Description>Provides design-time source generation support for VB Avalonia projects</Description>
+    <Description>
+Provides design-time source generation support for VB Avalonia projects.
+This package requires Visual Studio 16.9 or later.
+    </Description>
     <Authors>Nukepayload2,AvaloniaUI</Authors>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/Nukepayload2/Nukepayload2.SourceGenerators.AvaloniaUI</RepositoryUrl>
