@@ -9,6 +9,10 @@
   </PropertyGroup>
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
+    <AvaloniaXaml Remove="Models\**" />
+    <Compile Remove="Models\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Models\**" />
     <None Remove=".gitignore" />
   </ItemGroup>
   <ItemGroup>
@@ -25,11 +29,6 @@
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.9" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.9" />
     <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.9" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Remove="Models\**" />
-    <None Remove="Models\**" />
   </ItemGroup>
 
   <!--Globbing-->
