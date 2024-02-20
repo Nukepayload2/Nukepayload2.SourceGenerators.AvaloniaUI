@@ -17,14 +17,14 @@ This is a Visual Basic SourceGenerator built for generating strongly-typed refer
         - [x] CommandSample
         - [x] ValidationSample
         - [x] ValueConversionSample
-    - [ ] Port [CustomControls](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CustomControls) samples
-        - [ ] RatingControlSample
+    - [x] Port [CustomControls](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CustomControls) samples
+        - [x] RatingControlSample
     - [ ] Port [DataTemplates](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/DataTemplates) samples
         - [ ] BasicDataTemplateSample
         - [ ] FuncDataTemplateSample
         - [ ] IDataTemplateSample
-    - [ ] Port [Drawing](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Drawing) samples
-        - [ ] BattleCity
+    - [x] Port [Drawing](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Drawing) samples
+        - [x] BattleCity
     - [ ] Port [Routing](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Routing) samples
         - [ ] BasicViewLocatorSample
     - [ ] Port [ViewInteraction](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/ViewInteraction) samples
