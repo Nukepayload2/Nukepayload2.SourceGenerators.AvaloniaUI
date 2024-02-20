@@ -7,15 +7,15 @@ Embedded 3rd-party components:
 
 ## Progress
 - [x] Convert C# generator to VB
-- [x] Basic manual testing
+- [x] Basic manual testing (tested with 11.0.9)
     - [x] `InitializeComponents` is working
     - [x] `DesignerGenerated` (automatic `InitializeComponents` call) is working
-    - [x] `x:Name` and `WithEvents` is working
+    - [x] `x:Name` -> `WithEvents` is working
 - [ ] Add demo projects
     - [ ] Port [Mvvm](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/MVVM) samples
         - [x] BasicMvvm
         - [x] CommandSample
-        - [ ] ValidationSample
+        - [x] ValidationSample
         - [ ] ValueConversionSample
     - [ ] Port [CustomControls](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CustomControls) samples
         - [ ] RatingControlSample
