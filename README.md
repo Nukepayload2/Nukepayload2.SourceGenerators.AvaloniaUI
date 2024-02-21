@@ -48,11 +48,11 @@ You can use [demo projects](https://github.com/Nukepayload2/Nukepayload2.SourceG
         - [x] IDataTemplateSample
     - [x] Port [Drawing](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Drawing) samples
         - [x] BattleCity
-    - [ ] Port [Routing](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Routing) samples
-        - [ ] BasicViewLocatorSample
-    - [ ] Port [ViewInteraction](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/ViewInteraction) samples
-        - [ ] DialogManagerSample
-        - [ ] MvvmDialogSample
+    - [x] Port [Routing](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Routing) samples
+        - [x] BasicViewLocatorSample
+    - [x] Port [ViewInteraction](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/ViewInteraction) samples
+        - [x] DialogManagerSample
+        - [x] MvvmDialogSample
     - [ ] Port [Testing](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Testing) samples
         - [ ] TestableApp
         - [ ] TestableApp.Appium
