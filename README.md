@@ -34,7 +34,7 @@ You can use [demo projects](https://github.com/Nukepayload2/Nukepayload2.SourceG
     - [x] `InitializeComponents` is working
     - [x] `DesignerGenerated` (automatic `InitializeComponents` call) is working
     - [x] `x:Name` -> `WithEvents` is working
-- [ ] Add demo projects
+- [x] Add demo projects
     - [x] Port [Mvvm](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/MVVM) samples
         - [x] BasicMvvm
         - [x] CommandSample
@@ -53,11 +53,11 @@ You can use [demo projects](https://github.com/Nukepayload2/Nukepayload2.SourceG
     - [x] Port [ViewInteraction](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/ViewInteraction) samples
         - [x] DialogManagerSample
         - [x] MvvmDialogSample
-    - [ ] Port [Testing](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Testing) samples
-        - [ ] TestableApp
-        - [ ] TestableApp.Appium
-        - [ ] TestableApp.Headless.NUnit
-        - [ ] TestableApp.Headless.XUnit
+    - [x] Port [Testing](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Testing) samples
+        - [x] TestableApp
+        - [x] TestableApp.Appium
+        - [x] TestableApp.Headless.NUnit
+        - [x] TestableApp.Headless.XUnit
     - [x] Add VB-specific samples for testing purpose
         - [x] Generate `WithEvents` by using `x:Name` in XAML
         - [x] The `InitializeComponents` method can be automatically called by the VB compiler
