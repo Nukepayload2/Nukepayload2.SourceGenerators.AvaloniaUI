@@ -42,10 +42,10 @@ You can use [demo projects](https://github.com/Nukepayload2/Nukepayload2.SourceG
         - [x] ValueConversionSample
     - [x] Port [CustomControls](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/CustomControls) samples
         - [x] RatingControlSample
-    - [ ] Port [DataTemplates](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/DataTemplates) samples
-        - [ ] BasicDataTemplateSample
-        - [ ] FuncDataTemplateSample
-        - [ ] IDataTemplateSample
+    - [x] Port [DataTemplates](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/DataTemplates) samples
+        - [x] BasicDataTemplateSample
+        - [x] FuncDataTemplateSample
+        - [x] IDataTemplateSample
     - [x] Port [Drawing](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Drawing) samples
         - [x] BattleCity
     - [ ] Port [Routing](https://github.com/AvaloniaUI/Avalonia.Samples/tree/main/src/Avalonia.Samples/Routing) samples
