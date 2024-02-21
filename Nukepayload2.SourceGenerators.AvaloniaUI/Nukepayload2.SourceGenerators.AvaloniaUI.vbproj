@@ -22,7 +22,8 @@ This package requires Visual Studio 16.9 or later.
     </Description>
     <Authors>Nukepayload2,AvaloniaUI</Authors>
     <RepositoryType>Git</RepositoryType>
-    <RepositoryUrl>https://github.com/Nukepayload2/Nukepayload2.SourceGenerators.AvaloniaUI</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Nukepayload2/Nukepayload2.SourceGenerators.AvaloniaUI</PackageProjectUrl>
+    <RepositoryUrl>$(PackageProjectUrl).git</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>Support Avalonia 11.0.9</PackageReleaseNotes>
