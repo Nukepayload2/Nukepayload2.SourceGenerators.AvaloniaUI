@@ -12,9 +12,9 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <VersionSuffix>beta05</VersionSuffix>
+    <VersionSuffix></VersionSuffix>
     <Version>1.0.0</Version>
-    <PackageVersion>$(Version)-$(VersionSuffix)</PackageVersion>
+    <PackageVersion>$(Version)$(VersionSuffix)</PackageVersion>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Description>
 Provides design-time source generation support for VB Avalonia projects.
@@ -27,7 +27,7 @@ This package requires Visual Studio 16.9 or later.
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>Support Avalonia 11.0.9</PackageReleaseNotes>
     <Copyright>Copyright 2024 Nukepayload2</Copyright>
-    <PackageTags>Avalonia;VB;Visual Basic;Source generator</PackageTags>
+    <PackageTags>Avalonia;VB;Visual Basic;XAML;Name;Source generator</PackageTags>
   </PropertyGroup>
   
   <ItemGroup>

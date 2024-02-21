@@ -63,9 +63,9 @@ You can use [demo projects](https://github.com/Nukepayload2/Nukepayload2.SourceG
         - [x] The `InitializeComponents` method can be automatically called by the VB compiler
         - [x] x:FieldModifier: Make generated element references `Public`, `Friend`, `Protected` or `Private`. `Friend` is the default value.
         - [x] A project that uses the NuGet package of source generator instead of project reference 
-- [ ] Release NuGet package
+- [x] Release NuGet package
     - [x] Prerelease package when basic manual testing is completed
-    - [ ] Publish stable release when all demos are working correctly
+    - [x] Publish stable release when all demos are working correctly
 
 ## References
 Embedded 3rd-party components:
