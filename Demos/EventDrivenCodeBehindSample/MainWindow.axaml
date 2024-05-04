@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Width="680" Height="400"
+        x:Class="EventDrivenCodeBehindSample.MainWindow" MinWidth="400" MinHeight="280"
+        FontFamily="Segoe UI"
+        Title="7-zip file password tester">
+
+  <ScrollViewer>
+    <StackPanel Margin="4">
+      <TextBlock FontSize="20">Try passwords for 7z packages</TextBlock>
+      <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+        <Button x:Name="BtnOpenArchive">Open 7z or 7z.001 file</Button>
+        <Button x:Name="BtnCopyPassword" Margin="4,0,0,0" IsEnabled="False">Copy password</Button>
+        <Button x:Name="BtnCancelTest" Margin="4,0,0,0" IsEnabled="False">Cancel test</Button>
+      </StackPanel>
+      <ProgressBar x:Name="PrgGuess" Height="4" IsVisible="False" Margin="0,4,0,0" Foreground="Green"/>
+      <TextBlock TextWrapping="Wrap" x:Name="TblUseStatus" Margin="0,4,0,0">Ready.</TextBlock>
+      <TextBlock FontSize="20" Margin="0,8,0,0">Password dictionary maintenance</TextBlock>
+      <TextBlock TextWrapping="Wrap" Margin="0,4,0,0">
+        The password dictionary file is passwd.utf8.txt. It uses UTF-8 encoding (with or without BOM), and Windows new line characters.<LineBreak/> The following operations will be performed during optimization: Remove duplicates, remove empty lines, trim leading and trailing whitespace, and sort.<LineBreak/> Some optimization operations will also be performed during import.
+      </TextBlock>
+      <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+        <Button x:Name="BtnDictDistinct">Optimize password dictionary</Button>
+        <Button x:Name="BtnDictImport" Margin="4,0,0,0">Import items from clipboard</Button>
+      </StackPanel>
+      <TextBlock TextWrapping="Wrap" x:Name="TblMaintainStatus" Margin="0,4,0,0">Maintenance functions ready.</TextBlock>
+      <TextBlock FontSize="20" Margin="0,8,0,0">About</TextBlock>
+      <TextBlock TextWrapping="Wrap" Margin="0,4,0,0">
+        7-zip file password tester version 1.1<LineBreak/> © 2024 Nukepayload2 All rights reserved
+      </TextBlock>
+    </StackPanel>
+  </ScrollViewer>
+  
+</Window>
