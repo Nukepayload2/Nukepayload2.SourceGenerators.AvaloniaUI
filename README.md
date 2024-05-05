@@ -5,6 +5,8 @@ This is a Visual Basic SourceGenerator built for generating strongly-typed refer
 
 [![NuGet version (Nukepayload2.SourceGenerators.AvaloniaUI)](https://img.shields.io/nuget/v/Nukepayload2.SourceGenerators.AvaloniaUI.svg?style=flat-square)](https://www.nuget.org/packages/Nukepayload2.SourceGenerators.AvaloniaUI/)
 
+The [VB template pack](https://github.com/Nukepayload2/avalonia-vbnet-templates) has been released! It uses this source generator in project templates.
+
 ## VB-specific features
 - `WithEvents` members: allows you to attach events or locate event handlers with the drop-down button of Visual Basic code editor.
 - `DesignerGenerated` attribute: Let the Visual Basic compiler and editor call `InitializeComponents` for you.
