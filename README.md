@@ -23,7 +23,10 @@ The [VB template pack](https://github.com/Nukepayload2/avalonia-vbnet-templates)
 
 ## Avalonia compatibility
 ### Package 1.0.0 and its prerelease versions
-It's guaranteed to be compatible with `11.0.9` to `11.2.0`. Other versions may work, but they are not tested.
+#### Target Avalonia version
+`11.0.9`
+#### Highest tested Avalonia version
+`11.2.0`
 
 ## How to use it
 Install the `Nukepayload2.SourceGenerators.AvaloniaUI` package to a VB Avalonia project.
