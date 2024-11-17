@@ -17,13 +17,13 @@ The [VB template pack](https://github.com/Nukepayload2/avalonia-vbnet-templates)
 - .NET SDK 6.0 or later
 
 ### Highest tested environment
-- Visual Studio 17.9.0
-- .NET SDK 8.0
-- Windows 11 23H2
+- Visual Studio 17.12.0
+- .NET SDK 9.0
+- Windows 11 24H2
 
 ## Avalonia compatibility
 ### Package 1.0.0 and its prerelease versions
-It's guaranteed to be compatible with `11.0.9`. Other versions may work, but they are not tested.
+It's guaranteed to be compatible with `11.0.9` to `11.2.0`. Other versions may work, but they are not tested.
 
 ## How to use it
 Install the `Nukepayload2.SourceGenerators.AvaloniaUI` package to a VB Avalonia project.
